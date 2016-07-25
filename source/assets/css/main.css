@@ -448,3 +448,9 @@ table tr th :last-child,
 table tr td :last-child {
   margin-bottom: 0;
 }
+
+/* --- Manually added --- */
+.blog-tags {
+    color: #999;
+    font-size: 15px;
+}
