@@ -1,0 +1,31 @@
+{% extends 'default' %}
+
+{% block header %}
+<header class="header-section {% if page.bigimg %}has-img{% endif %}">
+    <div class="intro-header no-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>{{ page.title }}</h1>
+                        {% if page.subtitle %}
+                        <hr class="small">
+                        <span class="page-subheading">{{ page.subtitle }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block content_wrapper %}
+<div class="container" role="main">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {% block content '' %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+---
+layout: page
+title: Talks
+generator: pagination
+pagination:
+  provider: data.talks
+  max_per_page: 10
+use:
+- talks
+---
+
+<div class="posts-list">
+    <div class="posts-list">
+        {% for talk in page.pagination.items %}
+        <article class="post-preview">
+            <a href="{{ talk.url }}">
+                <h2 class="post-title">{{ talk.title }}</h2>
+
+                {% if talk.with %}
+                <h3 class="post-subtitle">
+                    With: {{ talk.with|raw }}
+                </h3>
+                {% endif %}
+            </a>
+
+            <p class="post-meta">
+            Given at {{ talk.event }} on {{ talk.date | date("F d, Y") }}
+            </p>
+
+        </article>
+        {% endfor %}
+    </div>
+
+    {% if page.pagination.previous_page or page.pagination.next_page %}
+        <ul class="pager main-pager">
+            {% if page.pagination.previous_page %}
+            <li class="previous">
+                <a href="{{ page.pagination.previous_page.url }}">&larr; Newer Posts</a>
+            </li>
+            {% endif %}
+            {% if page.pagination.next_page %}
+            <li class="next">
+                <a href="{{ page.pagination.next_page.url }}">Older Posts &rarr;</a>
+            </li>
+            {% endif %}
+        </ul>
+    {% endif %}
+
+</div>

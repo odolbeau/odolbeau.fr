@@ -1,0 +1,7 @@
+sculpin_content_types:
+  posts:
+    permalink: blog/:basename.html
+
+  talks:
+    type: path
+    permalink: talks/:basename.html

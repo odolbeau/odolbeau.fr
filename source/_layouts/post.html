@@ -1,0 +1,64 @@
+{% extends 'default' %}
+
+{% block header %}
+<header class="header-section {% if page.bigimg %}has-img{% endif %}">
+    <div class="intro-header no-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{ page.title }}</h1>
+                        {% if page.subtitle %}
+                        <hr class="small">
+                        <span class="post-subheading">{{ page.subtitle }}</span>
+                        {% endif %}
+
+                        <span class="post-meta">Posted on {{ page.date | date("F d, Y") }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block content_wrapper %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+            <article role="main" class="blog-post">
+                {% if page.outdated %}
+                    <div class="alert alert-warning">
+                        <h4>Outdated article!</h4>
+                        If it's a technical article, take care, maybe some informations are not exact anymore.<br />
+                        Otherwise, please keep in mind that this article was written quite a long time ago.
+                    </div>
+                {% endif %}
+
+                {% block content '' %}
+            </article>
+
+            {% if page.tags %}
+            <div class="blog-tags">
+                Tags: {{ page.tags | join(", ") }}
+            </div>
+            {% endif %}
+
+            <ul class="pager blog-pager">
+                {% if page.previous.url %}
+                <li class="previous">
+                    <a href="{{ site.url ~ page.previous.url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                </li>
+                {% endif %}
+                {% if page.next.url %}
+                <li class="next">
+                    <a href="{{ site.url ~ page.next.url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
