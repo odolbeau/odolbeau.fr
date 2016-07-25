@@ -10,4 +10,9 @@ When I'm not chilling in bars or attending concerts, I work for [BlaBlaCar][] as
 
 ElasticSearch fan, RabbitMQ lover, I try to contribute as much as possible in open source.
 
+# ...waiting for more!
+
+I don't have much too say! :o
+Let's keep in touch. :)
+
 [BlaBlaCar]: https://www.blablacar.fr
