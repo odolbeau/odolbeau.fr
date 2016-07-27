@@ -453,4 +453,5 @@ table tr td :last-child {
 .blog-tags {
     color: #999;
     font-size: 15px;
+    margin-bottom: 30px;
 }

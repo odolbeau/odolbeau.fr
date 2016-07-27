@@ -41,6 +41,19 @@
             </a>
             </p>
             {% endif %}
+
+            <ul class="pager blog-pager">
+                {% if page.previous_talk %}
+                <li class="previous">
+                    <a href="{{ page.previous_talk.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous_talk.title }}">&larr; Previous Talk</a>
+                </li>
+                {% endif %}
+                {% if page.next_talk %}
+                <li class="next">
+                    <a href="{{ page.next_talk.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.next_talk.title }}">Next Talk &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
         </div>
     </div>
 </div>

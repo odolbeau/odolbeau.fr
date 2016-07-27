@@ -46,14 +46,14 @@
             {% endif %}
 
             <ul class="pager blog-pager">
-                {% if page.previous.url %}
+                {% if page.previous_post %}
                 <li class="previous">
-                    <a href="{{ site.url ~ page.previous.url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                    <a href="{{ page.previous_post.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous_post.title }}">&larr; Previous Post</a>
                 </li>
                 {% endif %}
-                {% if page.next.url %}
+                {% if page.next_post %}
                 <li class="next">
-                    <a href="{{ site.url ~ page.next.url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                    <a href="{{ page.next_post.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.next_post.title }}">Next Post &rarr;</a>
                 </li>
                 {% endif %}
             </ul>
