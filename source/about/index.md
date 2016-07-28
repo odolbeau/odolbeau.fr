@@ -27,6 +27,6 @@ subtitle: A bit more about myself
     <textarea class="form-control" id="message" placeholder="Your message" name="message" rows="3"></textarea>
   </div>
 
-  <input type="hidden" name="_next" value="{{ site.url }}/about/thanks.html" />
+  <input type="hidden" name="_next" value="{{ site.url }}/about/thanks/" />
   <button type="submit" class="btn btn-default">Send</button>
 </form>
