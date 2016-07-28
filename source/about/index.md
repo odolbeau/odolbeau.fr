@@ -1,32 +1,30 @@
 ---
 layout: page
-title: About
-subtitle: A bit more about myself
+title: About me
+subtitle: Me, myself and I!
 ---
 
 {% include 'about.html.twig' %}
 
-<form action="https://formspree.io/contact@odolbeau.fr" method="POST">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" placeholder="Your name" name="name" />
-  </div>
-  <div class="form-group">
-    <label for="email">Email address</label>
-    <div class="input-group">
-      <span class="input-group-addon">@</span>
-      <input type="email" class="form-control" id="email" placeholder="Email" name="_replyto" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="subject">Subject</label>
-    <input type="text" class="form-control" id="subject" placeholder="Subject of your message" name="_subject" />
-  </div>
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea class="form-control" id="message" placeholder="Your message" name="message" rows="3"></textarea>
-  </div>
+<h1>Contact</h1>
 
-  <input type="hidden" name="_next" value="{{ site.url }}/about/thanks/" />
-  <button type="submit" class="btn btn-default">Send</button>
+<p>Don't hesitate to send me a message, I'll try to respond quickly. :)</p>
+
+<form action="https://formspree.io/contact@odolbeau.fr" method="POST" id="contact-form">
+    <div class="row">
+        <div class="col-xs-6">
+                <input type="text" class="form-control input-lg" id="name" placeholder="Name" name="name" required="required" />
+        </div>
+        <div class="col-xs-6">
+                <input type="email" class="form-control input-lg" id="email" placeholder="Email" name="_replyto" required="required" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+                <textarea class="form-control input-lg" id="message" placeholder="Message" name="message" rows="3" required="required"></textarea>
+        </div>
+    </div>
+
+    <input type="hidden" name="_next" value="{{ site.url }}/about/thanks/" />
+    <button type="submit" class="btn btn-lg btn-primary">Send</button>
 </form>
