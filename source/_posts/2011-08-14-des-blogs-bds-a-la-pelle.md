@@ -1,14 +1,11 @@
 ---
 layout: post
 title: "Des blogs BDs à la pelle..."
+subtitle: Un peu de fun dans ce monde de tech.
 lang: fr
 description: Des blogs BDs à la pelle...
 tags: [détente, bds]
 ---
-
-<div class="img-container-medium alignright">
-    <img src="/images/posts/2011-08-14/amour-haine-regression-lineaire.gif" alt="Amour, haine, régression linéaire" title="amour-haine-regression-lineaire" width="235" height="295" class="thumbnail alignright" />
-</div>
 
 Fans de BD? Ce post est pour vous! :)
 

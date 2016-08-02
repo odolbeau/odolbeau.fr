@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Use virtuals forms with Symfony2"
-description: Use virtuals forms with Symfony2
+description: "Use virtuals forms with Symfony2"
 tags: [symfony2, forms, virtual]
 ---
 
@@ -9,13 +9,12 @@ tags: [symfony2, forms, virtual]
 This article is now an official <a href="http://www.symfony.com/doc/current/cookbook/form/use_virtuals_forms.html">cookbook</a> since <a href="https://github.com/symfony/symfony-docs/commit/a7781433cf6af9b43f924d2f61525537141d27bf">February 2012</a>.
 </div>
 
-_Wait! What? You already write [this]({{ site.url }}/blog/utiliser-les-forms-virtuals-avec-symfony2.html "Utiliser les forms virtuals avec Symfony2") before! Oo_
+_Wait! What? You already write [this](/blog/utiliser-les-forms-virtuals-avec-symfony2.html "Utiliser les forms virtuals avec Symfony2") before! Oo_
 
 Yes I do! But in french! And it seems it was not very clear... So let me explain virtuals forms again and this time... in english!
 
 We have 2 entities. A Company and a Customer :
 
-<div class="half-left">
 ```php
 <?php
 
@@ -34,9 +33,6 @@ class Company
     // Some nice getters / setters here.
 }
 ```
-</div>
-
-<div class="half-right">
 ```php
 <?php
 
@@ -55,8 +51,6 @@ class Customer
     // Some nice getters / setters here.
 }
 ```
-</div>
-<div class="clear"></div>
 
 Like you can see, both of our entities have these fields: `address`, `zipcode`, `city`, `country`.
 
@@ -66,7 +60,6 @@ Of course, we have only two entities which have to contains some location inform
 
 First, we create very simple CompanyType and CustomerType:
 
-<div class="half-left">
 ```php
 <?php
 
@@ -98,9 +91,7 @@ class CompanyType extends AbstractType
     }
 }
 ```
-</div>
 
-<div class="half-right">
 ```php
 <?php
 
@@ -132,8 +123,6 @@ class CustomerType extends AbstractType
     }
 }
 ```
-</div>
-<div class="clear"></div>
 
 Definitely nothing complicated here.
 
@@ -183,7 +172,6 @@ We can set the option `'virtual' => true` in the `getDefaultOptions` method of o
 
 Look at the result:
 
-<div class="half-left">
 ```php
 <?php
 // CompanyType
@@ -193,9 +181,7 @@ public function buildForm(FormBuilder $builder, array $options)
     $builder->add('foo', new LocationType());
 }
 ```
-</div>
 
-<div class="half-right">
 ```php
 <?php
 // CustomerType
@@ -205,8 +191,6 @@ public function buildForm(FormBuilder $builder, array $options)
     $builder->add('bar', new LocationType());
 }
 ```
-</div>
-<div class="clear"></div>
 
 With the virtual option set to false (default behavior), the Form Component expect a Foo (or Bar) object or array which contains our four location fields. Of course, we don't have this object/array in our entities and we don't want it!
 
