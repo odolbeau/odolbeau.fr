@@ -472,3 +472,8 @@ table tr td :last-child {
 #contact-form .form-control {
     margin-bottom: 15px;
 }
+
+pre {
+    background-color: #002b36;
+    border: 1px solid #002b36;
+}
