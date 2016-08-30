@@ -9,7 +9,7 @@ tags: [ansible, configuration management]
 ## Why Ansible?
 
 As you may know, I'm pretty familiar with [chef](https://www.chef.io/chef/ "Official chef website") and I use it almost every day, for both professional & personal stuff.
-Despite that, I am quite willing to try something else and [Ansible](https://www.ansible.com/ "Official Ansible website") is a quite well known (and used!) configuration management tool. I know a lot of people who are quite pleased to use it!
+Despite that, I am quite willing to try something else and [Ansible](https://www.ansible.com/ "Official Ansible website") is a well known (and used!) configuration management tool. I know a lot of people who are quite pleased to use it!
 
 Furthermore, I changed my laptop last week so it was the perfect occasion to give it a try :).
 
@@ -63,7 +63,7 @@ Let's explain those 2 steps.
 
 #### Bootstrap
 
-As `ansible` isn't installed by default on your,laptop, the goal of the bootstrap is to install it. Furthermore, I don't want to deal with the `ansible` command line because there are several arguments to include and I'm used too `make install` everything; that's why I need `make` too. Finally, as ansible will be run by my user and not by root, I need to have some privileges, that's why I also install `sudo` and grant all privileges to the current user.
+As `ansible` isn't installed by default on your laptop, the goal of the bootstrap is to install it. Furthermore, I don't want to deal with the `ansible` command line because there are several arguments to include and I'm used too `make install` everything; that's why I need `make` too. Finally, as ansible will be run by my user and not by root, I need to have some privileges, that's why I also install `sudo` and grant all privileges to the current user.
 
 Here is the boostrap script:
 
