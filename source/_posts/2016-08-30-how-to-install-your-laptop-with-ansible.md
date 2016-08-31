@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to install your personal laptop with ansible?"
+title: "How to install your laptop with ansible?"
 subtitle: Cause you don't want to do it manually!
 description: Ansible is a great easy-to-use tool! Automating the installation of your personal laptop is a perfect use case to start playing with it!
 tags: [ansible, configuration management]
