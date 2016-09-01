@@ -1,4 +1,7 @@
-.PHONY: serve deploy
+.PHONY: install serve deploy
+
+install:
+	sculpin install
 
 serve:
 	sculpin generate --watch --server
