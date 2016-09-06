@@ -16,7 +16,7 @@ Si comme moi, une subite envie de fuire vous prends à l'idée de devoir écrire
 
 **SANS** les datas providers:
 
-```php
+```language-php
 <?php
 class MonTestCase extends WebTestCase
 {
@@ -30,7 +30,7 @@ Nous sommes ici obligés d'écrire chacun de nos tests un par un...
 
 **AVEC** les datas providers:
 
-```php
+```language-php
 <?php
 class MonTestCase extends WebTestCase
 {

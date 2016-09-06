@@ -15,7 +15,7 @@ Yes I do! But in french! And it seems it was not very clear... So let me explain
 
 We have 2 entities. A Company and a Customer :
 
-```php
+```language-php
 <?php
 
 namespace ...;
@@ -33,7 +33,7 @@ class Company
     // Some nice getters / setters here.
 }
 ```
-```php
+```language-php
 <?php
 
 namespace ...;
@@ -60,7 +60,7 @@ Of course, we have only two entities which have to contains some location inform
 
 First, we create very simple CompanyType and CustomerType:
 
-```php
+```language-php
 <?php
 
 namespace ...;
@@ -92,7 +92,7 @@ class CompanyType extends AbstractType
 }
 ```
 
-```php
+```language-php
 <?php
 
 namespace ...;
@@ -129,7 +129,7 @@ Definitely nothing complicated here.
 Now, we have to deal with our four duplicated fields...
 Here is a (simple) location FormType:
 
-```php
+```language-php
 <?php
 
 namespace ...;
@@ -172,7 +172,7 @@ We can set the option `'virtual' => true` in the `getDefaultOptions` method of o
 
 Look at the result:
 
-```php
+```language-php
 <?php
 // CompanyType
 
@@ -182,7 +182,7 @@ public function buildForm(FormBuilder $builder, array $options)
 }
 ```
 
-```php
+```language-php
 <?php
 // CustomerType
 

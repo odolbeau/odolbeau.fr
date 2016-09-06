@@ -11,7 +11,7 @@ Petite astuce pour ceux qui seraient amenés a utiliser autre chose un **string*
 
 Il vous suffit simplement de modifier votre fichier routing.yml de manière à préciser la nature de la clé primaire attendue dans les requirements:
 
-```yaml
+```language-yaml
 annonce:
   class: sfPropelRouteCollection
   requirements: { id: \w+ }

@@ -31,7 +31,7 @@ PEAR va permettre d'installer symfony ([ainsi que de nombreux autres packages](h
 
     Ce qui donne dans mon cas:
 
-    ```bash
+    ```language-bash
     cd C:\APPS\WampServer\bin\php\php5.2.6
     go-pear.bat
     ```
@@ -40,7 +40,7 @@ PEAR va permettre d'installer symfony ([ainsi que de nombreux autres packages](h
 
     Créez un fichier `script.bat` dans le dossier `bin/php/php5.x.x` de votre répertoire d'installation de WampServer puis copiez-y le code suivant:
 
-    ```bash
+    ```language-bash
     php -d phar.require_hash=0 PEAR\go-pear.phar
     ```
 
@@ -69,13 +69,13 @@ Voilà, PEAR est installé et fonctionnel!
 
 Comme expliqué ci-dessus, PEAR va maintenant nous permettre d'installer symfony grâce à une simple ligne de commande! Ou plutôt deux! La première va permettre d'enregistrer un nouveau [channel](http://pear.php.net/channels/ "Liste des channels PEAR") contenant une liste de packages. Une fois ce channel ajouté, il suffit d'installer le package de son choix, en l'occurrence, la dernière version stable de symfony. Voici les commandes:
 
-```bash
+```language-bash
 pear channel-discover pear.symfony-project.com
 ```
 
 puis
 
-```bash
+```language-bash
 pear install symfony/symfony
 ```
 

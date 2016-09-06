@@ -15,7 +15,7 @@ Mais un exemple concret sera sans aucun doute bien plus parlant!</p>
 
 <p>Nous avons donc une entité contenant entres autres, différents champs d'adresse:</p>
 
-```php
+```language-php
 <?php
 
 namespace ...;
@@ -59,7 +59,7 @@ class Company
 
 <p>Passons à notre FormType:</p>
 
-```php
+```language-php
 <?php
 
 namespace ...;

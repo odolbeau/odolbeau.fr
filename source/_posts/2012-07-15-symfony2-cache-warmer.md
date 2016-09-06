@@ -26,7 +26,7 @@ Lot of things, created by cache warmers.
 
 Juste create a file that extend the [CacheWarmerInterface](https://github.com/symfony/symfony/blob/master/src/Symfony/Component/HttpKernel/CacheWarmer/CacheWarmerInterface.php "CacheWarmerInterface definition") provided by the HttpKernel Component.
 
-```php
+```language-php
 <?php
 
 use Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface;
@@ -52,7 +52,7 @@ For the implementation, you can take a look at the [TemplatePathsCacheWarmer](ht
 
 Of course, you have to declare your CacheWarmer as a service. Do not forget to tag it with `kernel.cache_warmer`:
 
-```xml
+```language-xml
 <service id="my_custom.cache_warmer" class="path/to/MyCustomCacheWarmer">
     <tag name="kernel.cache_warmer" />
 </service>
@@ -64,7 +64,7 @@ To use your cached data, it's very simple. Look at [TemplateLocator](https://git
 
 The `TemplateLocator` simply require the cached file and store the result into a var. To do the same thing, simply store a return statement in your file. For example, the `app/cache/dev/templates.php` file looks like this:
 
-```php
+```language-php
 <?php return array (
     'template_name' => 'path/to/template',
     // ...

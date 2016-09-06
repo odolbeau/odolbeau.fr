@@ -19,7 +19,7 @@ La configuration des virtuals hosts se fera dans le fichier `httpd-vhosts.conf` 
 
 Ouvrez donc ce fichier et vérifiez que la ligne d'include de `httpd-vhosts.conf` est bien décommentée:
 
-```
+```language-apacheconf
 # Virtual hosts
 Include conf/extra/httpd-vhosts.conf
 ```
@@ -28,13 +28,13 @@ Maintenant, on commence les choses sérieuses en ouvrant le-dit fichier `httpd-v
 
 Vous pouvez commencer par supprimer les exemples avant d'ajouter cette ligne **INDISPENSABLE** à votre fichier:
 
-```
+```language-apacheconf
 NameVirtualHost *:80
 ```
 
 Ensuite, voici la configuration pour un virtual host pour le site "monSiteWeb":
 
-```
+```language-apacheconf
 <VirtualHost *:80>
     DocumentRoot "c:/racine/de/monSiteWeb/"
     ServerName local.monsiteweb.fr
@@ -64,7 +64,7 @@ Ce dernier se trouve:
 
 Ajoutez la ligne suivante:
 
-```
+```language-apacheconf
 127.0.0.1     local.monsiteweb.fr
 ```
 

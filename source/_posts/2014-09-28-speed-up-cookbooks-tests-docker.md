@@ -26,7 +26,7 @@ Just add `kitchen-docker` in your `Gemfile` (or install it directly with `gem
 install kitchen-docker`) and you can now start to use docker instead of
 Vagrant. \o/ Just replace you're current driver in `.kitchen.yml`:
 
-```yaml
+```language-yaml
 driver:
   name: docker
 ```
@@ -35,7 +35,7 @@ If you use docker on a Mac (with
 [boot2docker](https://github.com/boot2docker/boot2docker)) or inside another
 machine, you also need to change the socket used by the docker daemon :
 
-```yaml
+```language-yaml
 platforms:
 - name: ubuntu-12.04
   driver_config:

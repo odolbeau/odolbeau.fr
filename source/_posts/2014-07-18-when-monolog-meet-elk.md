@@ -37,7 +37,7 @@ Monolog provides a
 Here is an example of a gelf message (can be found [in the
 specs](http://graylog2.org/gelf#specs)) :
 
-```json
+```language-json
 {
   "version": "1.1",
   "host": "example.org",
@@ -57,7 +57,7 @@ as you wish.
 
 Here is a small example of a custom handler to log gelf messages in logstash:
 
-```yml
+```language-yml
 #config_dev.yml
 monolog:
     ...
@@ -89,7 +89,7 @@ Logstash has been created to manage logs. It collects, parses and stores them.
 There is a lot of existing inputs (41), filters (50) and outputs (55). For
 example, look at this configuration file :
 
-```json
+```language-json
 input {
     gelf {
         codec => "json"
