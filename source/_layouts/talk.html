@@ -42,6 +42,12 @@
             </p>
             {% endif %}
 
+            {% if page.video %}
+            <p>
+            Good news, this talk was recorded. <a href="{{ page.video }}">See the full conference.</a>
+            </p>
+            {% endif %}
+
             <ul class="pager blog-pager">
                 {% if page.previous_talk %}
                 <li class="previous">
