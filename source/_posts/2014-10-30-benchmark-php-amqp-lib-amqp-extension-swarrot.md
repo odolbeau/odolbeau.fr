@@ -133,7 +133,7 @@ and you're done. On the contrary, for the extension, you generally need to
 compile the `rabbitmq-c` (an AMQP client in C used by the php extension) which
 can be a bit boring.
 
-So, if you already install the extension and if it's not a problem for you, go
+So, if you already installed the extension or if it's not a problem for you, go
 for it! Otherwise, don't panic and use the library!
 
 In both case, take a look at [Swarrot](https://github.com/swarrot/swarrot) (and
