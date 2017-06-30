@@ -56,23 +56,29 @@ Code [is
 here](https://github.com/odolbeau/php-amqp-bench/blob/master/src/Bab/Console/Command/PublishCommand.php)
 The concerned queue has been purged before each launch.
 
-    ./bench publish [ext|lib] -m 1000000
+```language-bash
+./bench publish [ext|lib] -m 1000000
+```
 
 #### With the extension
 
-    +-------------+-------------+
-    | Duration    |  36 seconds |
-    +-------------+-------------+
-    | Memory peak | 1.5 MiB     |
-    +-------------+-------------+
+```language-bash
++-------------+-------------+
+| Duration    |  36 seconds |
++-------------+-------------+
+| Memory peak | 1.5 MiB     |
++-------------+-------------+
+```
 
 #### With the library
 
-    +-------------+-------------+
-    | Duration    |  46 seconds |
-    +-------------+-------------+
-    | Memory peak | 2.5 MiB     |
-    +-------------+-------------+
+```language-bash
++-------------+-------------+
+| Duration    |  46 seconds |
++-------------+-------------+
+| Memory peak | 2.5 MiB     |
++-------------+-------------+
+```
 
 #### So what?
 
@@ -85,23 +91,29 @@ In both case the memory consumption is very stable (I tried with 100, 1k, 10k,
 Code [is
 here](https://github.com/odolbeau/php-amqp-bench/blob/master/src/Bab/Console/Command/GetCommand.php).
 
-    ./bench get [ext|lib] -m 1000000
+```language-bash
+./bench get [ext|lib] -m 1000000
+```
 
 #### With the extension
 
-    +-------------+-------------+
-    | Duration    |  19 seconds |
-    +-------------+-------------+
-    | Memory peak | 1.8 MiB     |
-    +-------------+-------------+
+```language-bash
++-------------+-------------+
+| Duration    |  19 seconds |
++-------------+-------------+
+| Memory peak | 1.8 MiB     |
++-------------+-------------+
+```
 
 #### With the library
 
-    +-------------+-------------+
-    | Duration    |  43 seconds |
-    +-------------+-------------+
-    | Memory peak | 2.8 MiB     |
-    +-------------+-------------+
+```language-bash
++-------------+-------------+
+| Duration    |  43 seconds |
++-------------+-------------+
+| Memory peak | 2.8 MiB     |
++-------------+-------------+
+```
 
 #### So what?
 
