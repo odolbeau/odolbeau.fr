@@ -4,7 +4,6 @@ title: "Le mind mapping."
 lang: fr
 description: Le mind mapping.
 tags: [mémoire de recherche, mind mapping]
-outdated: true
 ---
 
 Une **mind map** (carte heuristique en français) est un **diagramme** de plus en plus utilisé. Plan de document, représentation d'idées diverses, brainstorming, les mind map sont aujourd'hui utilisées à toute les sauces. Les clés du succès? Facilité de réalisation, lisibilité,  clarté!

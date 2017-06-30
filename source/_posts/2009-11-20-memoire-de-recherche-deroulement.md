@@ -4,7 +4,6 @@ title: "Mémoire de recherche: Déroulement"
 lang: fr
 description: "Mémoire de recherche: Déroulement"
 tags: [mémoire de recherche]
-outdated: true
 ---
 
 Ce mémoire sera a réaliser au cours des huit prochains mois. La version finale doit être rendu le 15 juillet 2010 peu avant la soutenance orale qui se déroulera au cours du mois de septembre.

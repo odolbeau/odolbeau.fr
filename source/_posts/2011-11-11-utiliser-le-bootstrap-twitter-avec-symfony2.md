@@ -4,7 +4,6 @@ title: "Utiliser le bootstrap twitter avec symfony2"
 lang: fr
 description: Utiliser le bootstrap twitter avec symfony2
 tags: [symfony2, twitter, less, assetic]
-outdated: true
 ---
 
 Je me l'étais promis depuis longtemps, je l'ai enfin fait! Tester un minimum <a href="http://lesscss.org/" alt="Site officiel de Less">Less</a> avec <a href="https://github.com/kriswallsmith/assetic" alt="Repo d'Assetic sur github.">Assetic</a> (tant qu'à faire!).

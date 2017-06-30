@@ -4,7 +4,6 @@ title: "Utiliser les forms virtuals avec Symfony2"
 lang: fr
 description: Utiliser les forms virtuals avec Symfony2
 tags: [symfony2, forms, virtual]
-outdated: true
 ---
 
 <p>2012 commence tout juste (à ce propos, bonne année!) et commence plutôt bien!</p>

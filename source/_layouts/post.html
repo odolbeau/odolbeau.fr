@@ -34,7 +34,7 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
             <article role="main" class="blog-post" lang="{{ page.lang|default('en') }}">
-                {% if page.outdated %}
+                {% if date(page.date) < date('-1year') %}
                     <div class="alert alert-warning">
                         <h4>Outdated article!</h4>
                         If it's a technical article, take care, maybe some informations are not exact anymore.<br />

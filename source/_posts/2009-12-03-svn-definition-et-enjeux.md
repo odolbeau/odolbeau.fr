@@ -4,7 +4,6 @@ title: "SVN: Définition et enjeux"
 lang: fr
 description: "SVN: Définition et enjeux"
 tags: [svn, subversion]
-outdated: true
 ---
 
 Ou comment un serveur SVN (Subversion) peut vous **simplifier le développement** d'un projet collaboratif ou personnel.

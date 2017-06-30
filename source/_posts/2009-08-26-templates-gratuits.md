@@ -4,7 +4,6 @@ title: "Templates gratuits"
 lang: fr
 description: Templates gratuits
 tags: [templates, design]
-outdated: true
 ---
 
 Parce que faire un design sympa soit-même, ce n'est pas forcément le plus rapide et certainement pas le plus facile, voici quelques bonnes adresses pour trouver des templates gratuits! :)

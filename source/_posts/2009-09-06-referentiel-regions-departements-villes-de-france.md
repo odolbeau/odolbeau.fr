@@ -4,7 +4,6 @@ title: "Référentiel des régions, départements et villes de France"
 lang: fr
 description: "Référentiel des régions, départements et villes de France"
 tags: [référentiel, régions, départements, villes, France, symfony, propel]
-outdated: true
 ---
 
 Tout formulaire d'inscription ou presque impose la saisie d'une adresse qui devra être sévèrement contrôlée afin d'éviter les informations erronées.

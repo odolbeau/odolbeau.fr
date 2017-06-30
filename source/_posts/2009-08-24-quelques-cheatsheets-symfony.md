@@ -4,7 +4,6 @@ title: "Quelques cheatsheets Symfony..."
 lang: fr
 description: Quelques cheatsheets Symfony...
 tags: [symfony, cheatsheets]
-outdated: true
 ---
 
 Vous connaissez certainement les [cheatsheets][cheatsheets] (traduisez antisèches).

@@ -4,7 +4,6 @@ title: "Beaucoup de changements"
 lang: fr
 description: Beaucoup de changements
 tags: [changements, design, relooking]
-outdated: true
 ---
 
 Il fait beau, les oiseaux chantent et l'été approche (d'accord, encore un peu de patience tout de même!). Bref, la saison est propice au **changement** donc, en avant!

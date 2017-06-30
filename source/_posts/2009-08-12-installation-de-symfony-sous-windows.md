@@ -4,7 +4,6 @@ title: "Installation de symfony sous windows"
 lang: fr
 description: Installation de symfony sous windows
 tags: [symfony, php, windows, wamp]
-outdated: true
 ---
 
 Voici un petit tutoriel simple et rapide qui vous permettra de préparer votre environnement de travail puis d'installer symfony. Étapes nécessaires avant de pouvoir utiliser cet excellent framework! :)

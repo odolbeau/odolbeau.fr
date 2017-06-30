@@ -4,7 +4,6 @@ title: "Admin generator: Objet ayant un string en primary key"
 lang: fr
 description: "Admin generator: Objet ayant un string en primary key"
 tags: [symfony, admin generator, primary key, propel]
-outdated: true
 ---
 
 Petite astuce pour ceux qui seraient amenés a utiliser autre chose un **string** comme **clé primaire** d'une table et qui voudrait tout de même utiliser l'<a title="admin generator" href="http://www.odolbeau.fr/tag/admin-generator">admin generator</a> sans obtenir d'erreur...

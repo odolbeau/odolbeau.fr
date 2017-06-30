@@ -4,7 +4,6 @@ title: "Quand nos hommes politiques parlent d'Internet..."
 lang: fr
 description: Quand nos hommes politiques parlent d'Internet...
 tags: [politique, internet]
-outdated: true
 ---
 
 **Internet** occupe une place de plus en plus importante dans notre vie et de plus en plus de d'**hommes politiques** expriment leur opinion sur le sujet.

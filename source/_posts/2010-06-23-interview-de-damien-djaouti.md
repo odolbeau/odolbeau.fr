@@ -4,7 +4,6 @@ title: "Interview de Damien DJAOUTI"
 lang: fr
 description: Interview de Damien DJAOUTI
 tags: [mémoire de recherche, interview]
-outdated: true
 ---
 
 ## Présentation

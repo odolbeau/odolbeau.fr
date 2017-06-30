@@ -4,7 +4,6 @@ title: "Gérer plusieurs sites avec les virtuals hosts d'Apache"
 lang: fr
 description: "Gérer plusieurs sites avec les virtuals hosts d'Apache"
 tags: [apache, virtual hosts]
-outdated: true
 ---
 
 Vous connaissez certainement déjà les [alias](http://httpd.apache.org/docs/2.0/mod/mod_alias.html#alias "Apache mod_alias"), qui permettent de **gérer plusieurs sites** et qui sont très simple à mettre en place. Mais peut-être n'avez-vous jamais entendu parler des [virtuals hosts d'Apache](http://httpd.apache.org/docs/2.2/en/vhosts/ "Documentation des virtuals hosts d'Apache").
