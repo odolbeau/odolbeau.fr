@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Me, myself and I!
+subtitle: A bit more about myself
 ---
 
 {% include 'about.html.twig' %}
