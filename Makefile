@@ -25,7 +25,7 @@ install: ## Install project
 	vendor/bin/sculpin install
 
 serve: ## Run server & watch
-	vendor/bin/sculpin generate --watch --server
+	vendor/bin/sculpin generate --watch --server --port 8007
 
 deploy: ## Deploy the project
 	vendor/bin/sculpin generate --env=prod
