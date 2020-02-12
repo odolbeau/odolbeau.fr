@@ -138,7 +138,6 @@ It contains several files related to ssh and two tasks respectively called `main
 You will always have a `main.yml` task in a role as it's the default entry point. Here is an extract of this file:
 
 ```language-yaml
-{% raw %}
 ---
 
 - name: install packages
@@ -185,7 +184,6 @@ You will always have a `main.yml` task in a role as it's the default entry point
   command: make -C /home/odolbeau/vim-config install
 
 - include: nginx.yml
-{% endraw %}
 ```
 
 There are several instructions in this file. As you may have noticed, everything is in yaml and clearly understandable.
@@ -193,7 +191,6 @@ There are several instructions in this file. As you may have noticed, everything
 Let's explain some of this instructions:
 
 ```language-yaml
-{% raw %}
 - name: install packages
   become: true
   apt: name="{{ item }}" state=present
@@ -203,7 +200,6 @@ Let's explain some of this instructions:
     - curl
     - make
     # ...
-{% endraw %}
 ```
 
 Most of the ansible instructions speak for themselves!
@@ -213,38 +209,32 @@ In this case, we create a task which will use the `apt` module to install a pack
 The `become: true` option is used to run this task as root (cause the default value for `become_user` is root).
 
 ```language-yaml
-{% raw %}
 - name: Install slack
   apt:
     deb: https://downloads.slack-edge.com/linux_releases/slack-desktop-2.1.0-amd64.deb
     state: present
   become: true
-{% endraw %}
 ```
 
 In this case, we still use the `apt` module to install a remote package.
 Notice that you can use an inline syntax like in the first example with `apt: deb="..."` or the extended syntax like here.
 
 ```language-yaml
-{% raw %}
 - name: Install ssh config
   copy:
     src: "ssh/config"
     mode: "0644"
     dest: /home/odolbeau/.ssh/
-{% endraw %}
 ```
 
 Again, a very easy to understand task! I simply want to copy files coming from my roles (placed under `my_role/files/`) on my laptop. Easy! \o/
 
 ```language-yaml
-{% raw %}
 - name: Download dot files from github
   git: repo=ssh://git@github.com/odolbeau/dot-files.git dest=/home/odolbeau/dot-files
 
 - name: Install dot files
   command: make -C /home/odolbeau/dot-files install
-{% endraw %}
 ```
 
 Those 2 tasks are used to install my [dot-files](https://github.com/odolbeau/dot-files "My dot files"). The first one uses git to download the repository and the second executes a `make install` inside the correct folder.
@@ -266,7 +256,6 @@ For instance, in my case, I need to install a VPN client and to create a tunnel 
 Once the VPN is installed, here is what I use:
 
 ```language-yaml
-{% raw %}
 - command: ping -c 1 "a.private.url"
   register: vpn_connected
   ignore_errors: True
@@ -274,7 +263,6 @@ Once the VPN is installed, here is what I use:
 - pause:
     prompt: "Make sure to run the VPN in order to continue the installation. [Press any key once done]"
   when: vpn_connected|failed
-{% endraw %}
 ```
 
 I try to ping a private URL. I register the result of this command inside the `vpn_connected` var.
