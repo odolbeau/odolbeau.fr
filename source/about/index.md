@@ -10,7 +10,7 @@ subtitle: A bit more about myself
 
 <p>Don't hesitate to send me a message, I'll try to respond quickly. :)</p>
 
-<form action="https://formspree.io/contact@odolbeau.fr" method="POST" id="contact-form">
+<form action="https://formspree.io/f/xzbkqpwj" method="POST" id="contact-form">
     <div class="row">
         <div class="col-xs-6">
                 <input type="text" class="form-control input-lg" id="name" placeholder="Name" name="name" required="required" />
