@@ -29,4 +29,4 @@ serve: ## Run server & watch
 
 deploy: ## Deploy the project
 	vendor/bin/sculpin generate --env=prod
-	rsync -avr --delete-after --delete-excluded output_prod/ static_deploy:/space/products/blog/
+	rsync -avr --delete-after --delete-excluded output_prod/ deploy:/var/www/odolbeau.fr/
