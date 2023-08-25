@@ -22,7 +22,6 @@ help:
 
 install: ## Install project
 	composer install
-	vendor/bin/sculpin install
 
 serve: ## Run server & watch
 	vendor/bin/sculpin generate --watch --server --port 8007
