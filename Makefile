@@ -22,6 +22,7 @@ help:
 
 install: ## Install project
 	composer install
+	npm install --prefix source/
 
 serve: ## Run server & watch
 	vendor/bin/sculpin generate --watch --server --port 8007
