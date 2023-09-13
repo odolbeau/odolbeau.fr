@@ -15,7 +15,7 @@ use:
         {% for post in page.pagination.items %}
         <article class="post-preview">
             <a href="{{ post.url }}">
-                <h2 class="post-title">{{ post.title }}</h2>
+                <h2 class="post-title">{% if post.lang == 'fr' %}🇫🇷{% else %}🇬🇧󠁧󠁢󠁥󠁮󠁧󠁿{% endif %} {{ post.title }}</h2>
 
                 {% if post.subtitle %}
                 <h3 class="post-subtitle">
