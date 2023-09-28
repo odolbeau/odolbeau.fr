@@ -475,3 +475,7 @@ pre {
     background-color: #002b36;
     border: 1px solid #002b36;
 }
+
+.gist table tr {
+    border-top: none;
+}
