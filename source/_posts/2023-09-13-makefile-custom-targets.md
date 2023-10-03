@@ -37,7 +37,7 @@ Par fois il ne sera peut-être pas possible (ou trop long) de modifier le fichie
 
 Lorsqu'elle est lancée, la commande `make` va vérifier l'existence des fichiers `GNUmakefile`, `makefile` et `Makefile` (dans cet ordre) pour trouver sa configuration.
 
-C'est l'utilisation d'un fichier `Makefile` qui est officiellement recommandé dans la documentation et si on en croit github, c'est effectivement la solution la plus plébiscitée : [30k occurrences de GNUmakefile](https://github.com/search?q=path%3A%2F%28%3F-i%29%5C%2FGNUmakefile%24%2F&type=code), [224k occurrences de makefile](https://github.com/search?q=path%3A%2F%28%3F-i%29%5C%2Fmakefile%24%2F&type=code) et... pas moins de **[3,1 d'occurrences de Makefile](https://github.com/search?q=path%3A%2F%28%3F-i%29%5C%2FMakefile%24%2F&type=code)**.
+C'est l'utilisation d'un fichier `Makefile` qui est officiellement recommandé dans la documentation et si on en croit github, c'est effectivement la solution la plus plébiscitée : [30k occurrences de GNUmakefile](https://github.com/search?q=path%3A%2F%28%3F-i%29%5C%2FGNUmakefile%24%2F&type=code), [224k occurrences de makefile](https://github.com/search?q=path%3A%2F%28%3F-i%29%5C%2Fmakefile%24%2F&type=code) et... pas moins de **[3,1 millions d'occurrences de Makefile](https://github.com/search?q=path%3A%2F%28%3F-i%29%5C%2FMakefile%24%2F&type=code)**.
 
 Sachant ça, il est donc possible de jouer avec cette notion de priorité pour créer un fichier `GNUmakefile` et y ajouter la ligne suivante :
 
