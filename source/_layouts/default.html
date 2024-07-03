@@ -39,19 +39,8 @@
         <meta property="og:image" content="" />
         {% endif %}
 
-        <!-- Twitter summary cards -->
-        {#
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@{{ site.author.twitter }}" />
-        <meta name="twitter:creator" content="@{{ site.author.twitter }}" />
-        <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-        <meta name="twitter:description" content="{{ page.content | striptags  | truncatewords: 50 }}" />
-        {% if page.share-img %}
-        <meta name="twitter:image" content="{{ page.share-img }}" />
-        {% elsif site.avatar %}
-        <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}" />
-        {% endif %}
-        #}
+        <!-- @see https://matthiasott.com/notes/highlighting-blogging-on-mastodon -->
+        <meta property="fediverse:creator" content="@odolbeau@mastodon.social" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -117,6 +106,14 @@
                                     <span class="fa-stack fa-lg">
                                         <i class="fa-solid fa-circle fa-stack-2x"></i>
                                         <i class="fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="me" href="https://mastodon.social/@odolbeau" title="Mastodon">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                        <i class="fa-brands fa-mastodon fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
