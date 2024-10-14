@@ -47,6 +47,8 @@
             </p>
             {% endif %}
 
+            {% block content '' %}
+
             <ul class="pager blog-pager">
                 {% if page.previous_talk %}
                 <li class="previous">
@@ -61,6 +63,4 @@
             </ul>
         </div>
     </div>
-
-    {% block content '' %}
 {% endblock %}
