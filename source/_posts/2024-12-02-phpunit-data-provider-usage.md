@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A quel moment est-il pertinent d'utiliser un data provider PHPUnit ?
+title: À quel moment est-il pertinent d'utiliser un data provider PHPUnit ?
 lang: fr
 subtitle: Ou plutôt, quand faut-il éviter d'en utiliser un !
 description: Quand l'utilisation d'un data provider PHPUnit est-elle pertinente et quand ne l'est-elle pas.
