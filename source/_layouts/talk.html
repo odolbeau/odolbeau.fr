@@ -4,14 +4,10 @@
 <header class="header-section">
     <div class="intro-header no-img">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="talk-heading">
-                        <h1>{{ page.title }}</h1>
-                        <hr class="small">
-                        <span class="talk-subheading">At {{ page.event }} on {{ page.date | date("F d, Y") }}</span>
-                    </div>
-                </div>
+            <div class="talk-heading">
+                <h1>{% if page.lang == 'fr' %}🇫🇷{% else %}🇬🇧󠁧󠁢󠁥󠁮󠁧󠁿{% endif %} {{ page.title }}</h1>
+                <hr class="small">
+                <span class="talk-subheading">At {{ page.event }} on {{ page.date | date("F d, Y") }}</span>
             </div>
         </div>
     </div>
