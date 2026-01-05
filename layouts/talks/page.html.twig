@@ -1,0 +1,62 @@
+{% extends 'page.html.twig' %}
+
+{% block header %}
+<header class="header-section">
+    <div class="intro-header no-img">
+        <div class="container">
+            <div class="talk-heading">
+                <h1>{% if page.lang|default('en') == 'fr' %}🇫🇷{% else %}🇬🇧󠁧󠁢󠁥󠁮󠁧󠁿{% endif %} {{ page.title }}</h1>
+                <hr class="small">
+                <span class="talk-subheading">At {{ page.event }} on {{ page.date | date("F d, Y") }}</span>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <script
+                async
+                class="speakerdeck-embed"
+                data-id="{{ page.speakerdeck }}"
+                data-ratio="{{ page.ratio | default("1.3333333333333333") }}"
+                src="//speakerdeck.com/assets/embed.js">
+            </script>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {% if page.joindin is defined %}
+            <p>
+            Read and write reviews for this talk on <a href="https://joind.in/talk/{{ page.joindin }}">
+                <img src="{{ asset('images/joindin-logo.png') }}" alt="Joindin logo" height="25px" width="100px" />
+            </a>.
+            </p>
+            {% endif %}
+
+            {% if page.video is defined %}
+            <p>
+            Good news, this talk was recorded. <a href="{{ page.video }}">See the full conference.</a>
+            </p>
+            {% endif %}
+
+            {{ parent() }}
+
+            <ul class="pager blog-pager">
+                {% if page.prev is defined %}
+                <li class="previous">
+                    <a href="{{ url(page.prev) }}" data-toggle="tooltip" data-placement="top" title="{{ page.prev.title }}">&larr; Previous Talk</a>
+                </li>
+                {% endif %}
+                {% if page.next is defined %}
+                <li class="next">
+                    <a href="{{ url(page.next) }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next Talk &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

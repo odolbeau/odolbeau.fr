@@ -1,0 +1,64 @@
+{% extends 'page.html.twig' %}
+
+{% block header %}
+<header class="header-section">
+    <div class="intro-header no-img">
+        <div class="container">
+            <div class="post-heading">
+                <h1>{% if page.lang|default('en') == 'fr' %}🇫🇷{% else %}🇬🇧󠁧󠁢󠁥󠁮󠁧󠁿{% endif %} {{ page.title }}</h1>
+                {% if page.subtitle is defined %}
+                <hr class="small">
+                <span class="post-subheading">{{ page.subtitle }}</span>
+                {% endif %}
+
+                <span class="post-meta">Posted on {{ page.date | date("F d, Y") }}</span>
+
+                <div class="pull-right">
+                    <a href="https://github.com/odolbeau/odolbeau.fr/edit/main/pages/blog/{{ page.date|date('Y-m-d') }}-{{ page.slug[:-1] }}.md" class="btn btn-primary btn-xs">
+                        <i class="fa-solid fa-pencil" aria-hideen="true"></i> Edit this post!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+    <article role="main" class="blog-post" lang="{{ page.lang|default('en') }}">
+        {% if date(page.date) < date('-1year') %}
+            <div class="alert alert-warning">
+                {%- if page.lang|default('en') == 'en' -%}
+                    <h4>Outdated article!</h4>
+                    If it's a technical article, take care, maybe some informations are not exact anymore.<br />
+                    Otherwise, please keep in mind that this article was written quite a long time ago.
+                {%- else -%}
+                    <h4>Article potentiellement obsolète</h4>
+                    S'il s'agit d'un article technique, attention, certains informations ne sont peut-être plus exactes.<br />
+                    Autrement, merci de garder à l'esprit que cet article a été écrit il y a déjà un certain temps.
+                {%- endif -%}
+            </div>
+        {% endif %}
+
+        {{ parent() }}
+    </article>
+
+    {%- if page.tags -%}
+    <div class="blog-tags">
+        Tags: {{ page.tags | join(", ") }}
+    </div>
+    {%- endif -%}
+
+    <ul class="pager blog-pager">
+        {%- if page.prev is defined -%}
+        <li class="previous">
+            <a href="{{ url(page.prev) }}" data-toggle="tooltip" data-placement="top" title="{{ page.prev.title }}">&larr; Previous Post</a>
+        </li>
+        {%- endif -%}
+        {%- if page.next is defined -%}
+        <li class="next">
+            <a href="{{ url(page.next) }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next Post &rarr;</a>
+        </li>
+        {%- endif -%}
+    </ul>
+{% endblock content %}

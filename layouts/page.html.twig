@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+    <head>
+        {%- block head ~%}
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+            {{- include('partials/metatags.html.twig', {page, site}, with_context = false) ~}}
+
+            <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+            <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+
+            {%- block stylesheets ~%}
+                <!-- Bootstrap compiled and minified CSS -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" referrerpolicy="no-referrer">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" referrerpolicy="no-referrer">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+                <link href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-solarizedlight.min.css" rel="stylesheet">
+
+                <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+                <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
+            {%- endblock stylesheets ~%}
+
+        {%- endblock head ~%}
+    </head>
+    <body>
+        <header>
+            {%- block nav ~%}
+                <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/">{{ site.title }}</a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="main-navbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="/">About me</a></li>
+                                <li><a href="/blog/">Blog</a></li>
+                                <li><a href="/talks/">Talks</a></li>
+                                <li><a href="mailto:{{ site.author.email }}">Contact</a></li>
+                                <li><a href="/cv.pdf">CV <i class="fas fa-download"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="avatar-container">
+                            <div class="avatar-img-border">
+                                <a href="/">
+                                    <img class="avatar-img" src="{{ asset('images/avatar-icon.png') }}" />
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            {%- endblock nav ~%}
+
+            {%- block header ~%}
+                <header class="header-section">
+                    <div class="intro-header no-img">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                                    <div class="page-heading">
+                                        <h1>{{ page.title }}</h1>
+                                        {% if page.subtitle is defined %}
+                                        <hr class="small">
+                                        <span class="page-subheading">{{ page.subtitle }}</span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            {%- endblock header ~%}
+        </header>
+        <main class="container">
+            {%- block content ~%}
+                {{ page.content }}
+            {%- endblock content ~%}
+            {#- debug ~#}
+            {%- if getenv('CECIL_DEBUG') %}{{ d(page) }}{% endif ~%}
+        </main>
+        <footer>
+            {%- block footer ~%}
+                <div class="container beautiful-jekyll-footer">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                            <ul class="list-inline text-center footer-links">
+                                <li>
+                                    <a href="https://github.com/odolbeau" title="GitHub">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                            <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:{{ site.author.email }}" title="Email me">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                            <i class="fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://stackoverflow.com/users/1080352/olivier-dolbeau" title="StackOverflow">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                            <i class="fa-brands fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="TODO" title="RSS">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                            <i class="fa-solid fa-rss fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="copyright text-muted">
+                                Olivier Dolbeau
+                                &nbsp;&bull;&nbsp;
+                                {{ site.time | date('Y') }}
+
+                                &nbsp;&bull;&nbsp;
+                                <a href="{{ url(site.home) }}">odolbeau.fr</a>
+                            </p>
+                            <p class="theme-by text-muted">
+                                Blog powered by
+                                <a href="{{ cecil.url }}">{{ cecil.poweredby }}</a> -
+                                Original theme by
+                                <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {%- endblock footer ~%}
+        </footer>
+
+        {% block javascripts %}
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+            <!-- Bootstrap compiled and minified JavaScript -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+            <script src="{{ asset('js/main.js') }}"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-core.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        {% endblock %}
+    </body>
+</html>

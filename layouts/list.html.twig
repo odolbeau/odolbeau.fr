@@ -1,0 +1,50 @@
+{# all "showable pages by default #}
+{% set pages = site.pages.showable %}
+{# in case of a list page, take its sub pages #}
+{% if page.pages is defined %}
+    {%- set pages = page.pages -%}
+{% endif %}
+{# in case of a paginated list page, take the paginator list pages #}
+{% if page.paginator.pages is defined %}
+    {%- set pages = page.paginator.pages -%}
+{% endif %}
+
+{% extends 'page.html.twig' %}
+
+{%- block content ~%}
+    <div class="posts-list">
+        {%- for page in pages ~%}
+        <article class="post-preview">
+            <a href="{{ url(page) }}">
+                <h2 class="post-title">{% if page.lang|default('en') == 'fr' %}🇫🇷{% else %}🇬🇧󠁧󠁢󠁥󠁮󠁧󠁿{% endif %} {{ page.title }}</h2>
+                {% if page.subtitle is defined %}
+                    <h3 class="post-subtitle">
+                        {{ page.subtitle }}
+                    </h3>
+                {% endif %}
+            </a>
+
+            <p class="post-meta">
+                {% block page_meta %}Posted on {{ page.date | date("F d, Y") }}{% endblock %}
+            </p>
+        </article>
+        {%- endfor ~%}
+
+        {%- if page.paginator ~%}
+            {%- set links = page.paginator.links ~%}
+
+            <ul class="pager main-pager">
+                {%- if links.prev is defined ~%}
+                <li class="previous">
+                    <a href="{{ url(links.prev) }}">&larr; Newer Posts</a>
+                </li>
+                {%- endif ~%}
+                {%- if links.next is defined ~%}
+                <li class="next">
+                    <a href="{{ url(links.next) }}">Older Posts &rarr;</a>
+                </li>
+                {%- endif ~%}
+            </ul>
+        {%- endif ~%}
+    </article>
+{%- endblock content ~%}

@@ -2,7 +2,7 @@
 
 See website: https://odolbeau.fr
 
-Based on sculpin.
+Based on Cecil.
 
 To build this blog:
 

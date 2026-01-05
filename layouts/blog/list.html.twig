@@ -1,0 +1,30 @@
+{# all "showable pages by default #}
+{% set pages = site.pages.showable %}
+{# in case of a list page, take its sub pages #}
+{% if page.pages is defined %}
+    {%- set pages = page.pages -%}
+{% endif %}
+{# in case of a paginated list page, take the paginator list pages #}
+{% if page.paginator.pages is defined %}
+    {%- set pages = page.paginator.pages -%}
+{% endif %}
+
+{% extends 'list.html.twig' %}
+
+{%- block header ~%}
+    <header class="header-section">
+        <div class="intro-header no-img">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="page-heading">
+                            <h1>✍️ Blog</h1>
+                            <hr class="small">
+                            <span class="page-subheading">Some articles, mainly about PHP & Symfony ecosystem.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{%- endblock header ~%}
