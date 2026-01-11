@@ -2,8 +2,21 @@
 
 See website: https://odolbeau.fr
 
-Based on Cecil.
+Based on [Cecil](https://cecil.app).
 
-To build this blog:
+## Some useful command
 
-    make build
+**Service the blog locally:**
+
+```bash
+make serve
+```
+
+**Build & deploy the blog:**
+
+```bash
+make deploy
+```
+
+**Run cecil cli:**
+BOX_REQUIREMENT_CHECKER=0 php cecil.phar
