@@ -1,5 +1,5 @@
 ---
-title: 🚀 Découvrez TestedRoutesCheckerBundle !
+title: 🚀 Découvrez TestedRoutesCheckerBundle !
 date: 2026-02-04
 published: true
 lang: fr
