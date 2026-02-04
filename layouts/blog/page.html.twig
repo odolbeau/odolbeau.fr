@@ -1,5 +1,20 @@
 {% extends 'page.html.twig' %}
 
+        {% block head %}
+            {{ parent() }}
+            {%- for p in site.allpages -%}
+                {%- if page.reflang is defined and p.reflang is defined and p.reflang == page.reflang and p.lang != page.lang ~%}
+            <link rel="alternate" hreflang="{{ p.lang }}" href="{{ url(p, {canonical: true}) }}">
+                    {%- if p.lang == site.language -%}
+                        {%- set defaultpage = p -%}
+                    {%- else -%}
+                        {%- set defaultpage = page -%}
+                    {%- endif ~%}
+            <link rel="alternate" hreflang="x-default" href="{{ url(defaultpage, {language: site.language, canonical: true}) }}">
+                {%- endif ~%}
+            {%- endfor ~%}
+        {% endblock head %}
+
 {% block header %}
 <header class="header-section">
     <div class="intro-header no-img">
