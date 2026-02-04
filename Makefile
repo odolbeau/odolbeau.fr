@@ -14,7 +14,7 @@ install: ## Install project
 
 .PHONY: serve
 serve: ## Run server & watch
-	BOX_REQUIREMENT_CHECKER=0 php cecil.phar serve
+	CECIL_DEBUG=1 BOX_REQUIREMENT_CHECKER=0 php cecil.phar serve
 
 .PHONY: deploy
 deploy: ## Deploy the project
