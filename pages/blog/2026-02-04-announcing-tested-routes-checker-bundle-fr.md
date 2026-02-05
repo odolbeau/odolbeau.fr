@@ -3,6 +3,7 @@ title: 🚀 Découvrez TestedRoutesCheckerBundle !
 date: 2026-02-04
 published: true
 lang: fr
+reflang: announcing-tested-routes-checker-bundle
 subtitle: Améliorez la couverture de code de vos projets
 description: Annonce de la sortie de TestedRoutesCheckerBundle, l'outil idéal pour éviter les routes non testées !
 tags: [symfony, bundle, test]
