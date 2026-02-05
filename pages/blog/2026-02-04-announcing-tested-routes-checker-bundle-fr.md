@@ -12,7 +12,7 @@ tags: [symfony, bundle, test]
 Un court article pour vous annoncer la sortie d'un nouveau bundle : **TestedRoutesCheckerBundle** !
 
 Un petit outil simple et efficace pour vérifier que toutes les routes de votre app sont couvertes par des tests.
-Idéal pour éviter d'introduire ee nouvelles routes sans leurs tests associés.
+Idéal pour éviter d'introduire de nouvelles routes sans leurs tests associés.
 
 Toutes les infos sont disponibles ici :
 👉 https://github.com/odolbeau/TestedRoutesCheckerBundle
