@@ -1,0 +1,75 @@
+# Olivier Dolbeau
+
+> Personal site of Olivier Dolbeau (@odolbeau), a senior freelance web developer based in France, specialized in PHP and the Symfony ecosystem. Former employee at BlaBlaCar, SensioLabs, La Fourchette (TheFork) and Coverd. Site content: a short bio, a technical blog (mostly PHP/Symfony, French and English, since 2009), and a list of conference talks given since 2013.
+
+Content is a mix of French and English; each post/talk below is tagged (FR) or (EN). Older posts (2009-2012) target Symfony 1.x-era PHP and may describe outdated tooling — treat them as historical rather than current best practice.
+
+## About
+
+- [About me](https://odolbeau.fr/): bio, past employers, interests (open source, cycling, sailing, OpenStreetMap contributions, public speaking).
+- [CV](https://odolbeau.fr/cv.pdf): résumé (PDF).
+- Contact: contact@odolbeau.fr
+- [Atom feed](https://odolbeau.fr/atom.xml): all blog posts.
+
+## Blog
+
+Index: https://odolbeau.fr/blog/ — mainly PHP & Symfony ecosystem articles.
+
+- (EN) [Introducing TestedRoutesCheckerBundle!](https://odolbeau.fr/blog/announcing-tested-routes-checker-bundle/) (2026-02-04): announcing a Symfony bundle that checks all app routes are covered by tests. Also available (FR) [in French](https://odolbeau.fr/blog/announcing-tested-routes-checker-bundle-fr/).
+- (FR) [À quel moment est-il pertinent d'utiliser un data provider PHPUnit ?](https://odolbeau.fr/blog/phpunit-data-provider-usage/) (2024-12-02): when a PHPUnit data provider is (and isn't) the right tool.
+- (FR) [Définir ses propres tâches GNU Make dans son coin](https://odolbeau.fr/blog/makefile-custom-targets/) (2023-09-13): defining personal GNU Make targets without touching the project's shared Makefile.
+- (EN) [Why & How to use Doctrine Migrations Rollup?](https://odolbeau.fr/blog/doctrine-migrations-rollup/) (2020-05-07): squashing old Doctrine migrations instead of keeping hundreds of them around.
+- (EN) [How to install your laptop with ansible?](https://odolbeau.fr/blog/how-to-install-your-laptop-with-ansible/) (2016-08-30): automating personal laptop setup with Ansible.
+- (EN) [Which tool to use to make marketing dashboards?](https://odolbeau.fr/blog/which-tool-to-use-to-make-marketing-dashboards/) (2014-11-09): comparing dashboard tools for marketing use cases.
+- (EN) [Benchmark: PHP amqp-lib vs amqp-ext with Swarrot](https://odolbeau.fr/blog/benchmark-php-amqp-lib-amqp-extension-swarrot/) (2014-10-30): performance comparison of two PHP AMQP clients.
+- (EN) [Speed up your cookbooks tests with docker](https://odolbeau.fr/blog/speed-up-cookbooks-tests-docker/) (2014-09-28): using Docker to accelerate serverspec/cookbook tests.
+- (EN) [When Monolog meet ELK](https://odolbeau.fr/blog/when-monolog-meet-elk/) (2014-07-18): shipping PHP application logs to an ELK stack via Monolog.
+- (EN) [Symfony2 cache warmer](https://odolbeau.fr/blog/symfony2-cache-warmer/) (2012-07-15): writing custom Symfony2 cache warmers.
+- (EN) [Use virtual forms with Symfony2](https://odolbeau.fr/blog/use-virtuals-forms-with-symfony2/) (2012-01-23) — also (FR) [Utiliser les forms virtuals avec Symfony2](https://odolbeau.fr/blog/utiliser-les-forms-virtuals-avec-symfony2/) (2012-01-09).
+- (FR) [Utiliser le bootstrap twitter avec symfony2](https://odolbeau.fr/blog/utiliser-le-bootstrap-twitter-avec-symfony2/) (2011-11-11): integrating Twitter Bootstrap into a Symfony2 app.
+- (FR) [La puissance des data providers de PHPUnit](https://odolbeau.fr/blog/la-puissance-des-data-providers-de-phpunit/) (2011-08-08): an earlier take on PHPUnit data providers (see the 2024 follow-up above).
+- (FR) [HTML5: Désactiver la validation de vos forms](https://odolbeau.fr/blog/html5-desactiver-la-validation-de-vos-forms/) (2011-08-07): disabling native HTML5 form validation.
+- (FR) [Admin generator: Objet ayant un string en primary key](https://odolbeau.fr/blog/admin-generator-objet-string-primary-key/) (2010-10-18): symfony1 admin generator with a string primary key.
+
+### Early archive (2009-2010, French, Symfony 1.x / general web-dev era)
+
+Personal and Symfony 1.x-era posts, kept for history rather than current relevance: [Beaucoup de changements](https://odolbeau.fr/blog/beaucoup-de-changements/), [Le mind mapping](https://odolbeau.fr/blog/le-mind-mapping/), [Interview de Damien DJAOUTI](https://odolbeau.fr/blog/interview-de-damien-djaouti/), [Quand nos hommes politiques parlent d'Internet](https://odolbeau.fr/blog/quand-nos-hommes-politiques-parlent-dinternet/), [SVN: Définition et enjeux](https://odolbeau.fr/blog/svn-definition-et-enjeux/), [Mémoire de recherche: Déroulement](https://odolbeau.fr/blog/memoire-de-recherche-deroulement/), [Gérer plusieurs sites avec les virtuals hosts d'Apache](https://odolbeau.fr/blog/gerer-plusieurs-sites-virtuals-hosts-apache/), [Référentiel des régions, départements et villes de France](https://odolbeau.fr/blog/referentiel-regions-departements-villes-de-france/), [Des blogs BDs à la pelle](https://odolbeau.fr/blog/des-blogs-bds-a-la-pelle/), [Templates gratuits](https://odolbeau.fr/blog/templates-gratuits/), [Quelques cheatsheets Symfony](https://odolbeau.fr/blog/quelques-cheatsheets-symfony/), [Installation de symfony sous windows](https://odolbeau.fr/blog/installation-de-symfony-sous-windows/).
+
+## Talks
+
+Index: https://odolbeau.fr/talks/ — mostly French-language conference talks, 2013-2024, largely covering RabbitMQ/Swarrot, logging, microservices and Symfony at scale (drawn from Olivier's time at BlaBlaCar).
+
+- (FR) [Throw new \Exception(); Oui, mais laquelle ?](https://odolbeau.fr/talks/throw-new-exception-oui-mais-laquelle/) — Forum PHP 2024
+- (FR) [Jane & Webby](https://odolbeau.fr/talks/jane-and-webby/) — PHP Tour 2020
+- (FR) [Translating a monolingual application](https://odolbeau.fr/talks/translating-monolingual-application/) — AFUP Paris, Feb. 2020
+- (FR) [DX: Developer eXperience](https://odolbeau.fr/talks/dx-developer-experience-afsy/) — AFSY Paris / SfPot, June 2019
+- (FR) [DX: Developer eXperience](https://odolbeau.fr/talks/dx-developer-experience/) — AFUP Meetup Paris, 2019
+- (FR) [EasyAdminBundle introduction](https://odolbeau.fr/talks/easyadminbundle-introduction/) — AFSY Meetup Paris, 2019
+- (FR) [REX API Platform](https://odolbeau.fr/talks/rex-api-platform/) — PHPTour Nantes 2017
+- (FR) [Feature flags at BlaBlaCar](https://odolbeau.fr/talks/25-feature-flag-at-blablacar/) — ParisWeb 2016
+- (EN) [25+ million members in 22 countries, how to scale with Symfony 2?](https://odolbeau.fr/talks/25-million-members-in-22-countries/) — PHP Frameworks Day, Kiev, 2016
+- (FR) [Be gentle with your prod](https://odolbeau.fr/talks/be-gentle-with-your-prod/) — PHPTour Clermont 2016
+- (FR) [Elasticsearch at BlaBlaCar](https://odolbeau.fr/talks/elasticsearch-at-blablacar/) — sfLive Paris 2016
+- (FR) [Symfony at BlaBlaCar](https://odolbeau.fr/talks/symfony-paris-2015-symfony-at-blablacar/) — SymfonyCon Paris 2015
+- (EN) [From 1 to 20 million users: the technical story of BlaBlaCar](https://odolbeau.fr/talks/from-1-to-20-million-users/) — PHPCon PL 2015
+- (EN) [Swarrot: A library to consume them all!](https://odolbeau.fr/talks/swarrot-a-lib-to-consume-them-all/) — BlaBlaCar Tech Meetup, Warsaw, 2015
+- (FR) [Slicing up a monolithic application: Why and How?](https://odolbeau.fr/talks/slicing-up-a-monolithic-application/) — Paris Web 2015
+- (FR) [Symfony2 killed me!](https://odolbeau.fr/talks/symfony2-killed-me/) — sfPot Nantes 2015
+- (FR) [Logs hunting](https://odolbeau.fr/talks/logs-hunting/) — sfLive 2015 Paris
+- (EN) [Don't let your log go away!](https://odolbeau.fr/talks/dont-let-your-log-go-away/) — Paris Tech Talk Meetup, 2015
+- (FR) [Microservices at BlaBlaCar](https://odolbeau.fr/talks/microservices-at-blablacar/) — sfPot Paris 2015
+- (FR) [Laisse pas trainer ton log](https://odolbeau.fr/talks/laisse-pas-trainer-ton-log/) — Forum PHP Paris 2014
+- (FR) [When Monolog meet ELK](https://odolbeau.fr/talks/when-monolog-meet-elk/) — sfPot Paris 2014
+- (FR) [Doctrine Lexer use case](https://odolbeau.fr/talks/doctrine-lexer-use-case/) — PHPTour Lyon 2014
+- (FR) [Making asynchronous tasks in PHP](https://odolbeau.fr/talks/making-asynchronous-tasks-in-php-2/) — PHPTour Lyon 2014
+- (FR) [Swarrot: A library to consume them all!](https://odolbeau.fr/talks/sf-live-paris-swarrot/) — sfLive 2014
+- (FR) [Making asynchronous tasks in PHP](https://odolbeau.fr/talks/making-asynchronous-tasks-in-php/) — sfLive 2014
+- (FR) [3 million users in 10 countries: Technical history of BlaBlaCar](https://odolbeau.fr/talks/forum-php-paris-technical-history-blablacar/) — Forum PHP 2013
+- (FR) [Retour d'expérience sur l'utilisation de RabbitMQ chez BlaBlaCar](https://odolbeau.fr/talks/sfpot-paris-rabbitmq/) — sfPot Paris 2013
+
+## Optional
+
+- [GitHub](https://github.com/odolbeau): open-source projects and code.
+- [Stack Overflow](https://stackoverflow.com/users/1080352/olivier-dolbeau)
+- [OpenStreetMap profile](https://www.openstreetmap.org/user/Babounet)
+- [Site source (Cecil-based static site)](https://github.com/odolbeau/odolbeau.fr)
