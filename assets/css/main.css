@@ -520,7 +520,9 @@ table tr td :last-child {
     margin-left: 30px;
 }
 .about-icon {
-    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
     position: absolute;
     left: -40px;
     margin-top: 5px;
