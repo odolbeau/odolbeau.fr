@@ -8,6 +8,28 @@
 
             {{- include('partials/metatags.html.twig', {page, site}, with_context = false) ~}}
 
+            {#- Site-wide structured data: Person (Olivier Dolbeau) ~#}
+            {%- block jsonld_person ~%}
+            <script type="application/ld+json">{%- apply minify_js ~%}
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "@id": "{{ url(site.home, {canonical: true}) }}#person",
+              "name": "{{ site.author.name|e }}",
+              "url": "{{ site.author.url|e }}",
+              "jobTitle": "{{ site.baseline|e }}",
+              "email": "{{ site.author.email|e }}",
+              "image": "{{ url(asset('images/avatar-icon.png'), {canonical: true}) }}",
+              "description": "{{ site.description|replace({"\n": ' '})|trim|e }}",
+              "sameAs": [
+                "https://github.com/odolbeau",
+                "https://stackoverflow.com/users/1080352/olivier-dolbeau",
+                "https://www.openstreetmap.org/user/Babounet"
+              ]
+            }
+            {%- endapply ~%}</script>
+            {%- endblock jsonld_person ~%}
+
             <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
             <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
 

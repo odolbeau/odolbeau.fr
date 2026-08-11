@@ -1,7 +1,7 @@
 title: 'Olivier Dolbeau'
 baseline: 'Senior web dev freelance'
 baseurl: https://odolbeau.fr
-description: |
+description: >-
   Hello. My name is Olivier Dolbeau (@odolbeau).
   I currently live in France and work as a freelancer!
 
@@ -9,6 +9,9 @@ author:
   name: 'Olivier Dolbeau'
   url: 'https://odolbeau.fr'
   email: 'contact@odolbeau.fr'
+
+metatags:
+  data: true # enables Cecil's built-in JSON-LD structured data output (WebSite/WebPage/BreadcrumbList/...)
 
 taxonomies:
   tags: tag
