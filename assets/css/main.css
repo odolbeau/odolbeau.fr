@@ -237,6 +237,32 @@ img {
     }
 }
 
+/* --- Inline SVG icons (replacing Font Awesome) --- */
+
+.icon {
+    display: inline-block;
+    width: 0.85em;
+    height: 0.85em;
+    vertical-align: -0.1em;
+    fill: currentColor;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background: #404040;
+}
+
+.social-icon svg {
+    width: 1.1em;
+    height: 1.1em;
+    fill: #FFF;
+}
+
 /* --- Footer --- */
 
 footer {
