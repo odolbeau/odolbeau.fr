@@ -18,5 +18,6 @@ serve: ## Run server & watch
 
 .PHONY: deploy
 deploy: ## Deploy the project
+	rm -rf .cache .cecil
 	BOX_REQUIREMENT_CHECKER=0 php cecil.phar build
 	rsync -avr --delete-after --delete-excluded _site/ deploy:/var/www/odolbeau.fr/
