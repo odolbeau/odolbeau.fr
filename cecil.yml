@@ -4,6 +4,7 @@ baseurl: https://odolbeau.fr
 description: >-
   Hello. My name is Olivier Dolbeau (@odolbeau).
   I currently live in France and work as a freelancer!
+image: images/og-default.png # default og:image / twitter:image, used when a page doesn't set its own
 
 author:
   name: 'Olivier Dolbeau'
