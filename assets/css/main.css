@@ -33,9 +33,28 @@ p a {
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 800;
+    /* Prevent long unbroken strings (e.g. CamelCase titles) from
+       overflowing the viewport on small screens. */
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 a {
     color: #008AFF;
+}
+
+/* Avoid horizontal overflow from long unbroken strings (raw URLs,
+   CamelCase package names, etc.) in post/page body content. */
+.blog-post,
+.post-preview,
+.intro-header {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.blog-post a,
+.post-preview a {
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 a:hover,
 a:focus {
