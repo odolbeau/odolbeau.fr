@@ -33,9 +33,28 @@ p a {
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 800;
+    /* Prevent long unbroken strings (e.g. CamelCase titles) from
+       overflowing the viewport on small screens. */
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 a {
     color: #008AFF;
+}
+
+/* Avoid horizontal overflow from long unbroken strings (raw URLs,
+   CamelCase package names, etc.) in post/page body content. */
+.blog-post,
+.post-preview,
+.intro-header {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.blog-post a,
+.post-preview a {
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 a:hover,
 a:focus {
@@ -235,6 +254,32 @@ img {
         border: 1px solid #eaeaea;
         border-width: 0 1px 1px;
     }
+}
+
+/* --- Inline SVG icons (replacing Font Awesome) --- */
+
+.icon {
+    display: inline-block;
+    width: 0.85em;
+    height: 0.85em;
+    vertical-align: -0.1em;
+    fill: currentColor;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background: #404040;
+}
+
+.social-icon svg {
+    width: 1.1em;
+    height: 1.1em;
+    fill: #FFF;
 }
 
 /* --- Footer --- */
@@ -475,7 +520,9 @@ table tr td :last-child {
     margin-left: 30px;
 }
 .about-icon {
-    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
     position: absolute;
     left: -40px;
     margin-top: 5px;
