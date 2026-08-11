@@ -13,6 +13,35 @@
             <link rel="alternate" hreflang="x-default" href="{{ url(defaultpage, {language: site.language, canonical: true}) }}">
                 {%- endif ~%}
             {%- endfor ~%}
+
+            {#- Structured data: BlogPosting (no "image" property: no post currently has a real
+                qualifying image, and Google's Article guidelines require one when present, so it's
+                omitted rather than faked with e.g. the avatar) ~#}
+            {%- block jsonld_blogposting ~%}
+            <script type="application/ld+json">{%- apply minify_js ~%}
+            {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": "{{ page.title|e }}",
+              {%- if page.description|default is not empty ~%}
+              "description": "{{ page.description|replace({"\n": ' '})|trim|e }}",
+              {%- endif ~%}
+              "datePublished": "{{ page.date|date('c') }}",
+              "dateModified": "{{ page.date|date('c') }}",
+              "inLanguage": "{{ page.lang|default(site.language) }}",
+              "url": "{{ url(page, {canonical: true}) }}",
+              "author": {
+                "@id": "{{ url(site.home, {canonical: true}) }}#person"
+              },
+              "publisher": {
+                "@id": "{{ url(site.home, {canonical: true}) }}#person"
+              }
+              {%- if page.tags|default is not empty ~%},
+              "keywords": "{{ page.tags|join(', ')|e }}"
+              {%- endif ~%}
+            }
+            {%- endapply ~%}</script>
+            {%- endblock jsonld_blogposting ~%}
         {% endblock head %}
 
 {% block header %}
