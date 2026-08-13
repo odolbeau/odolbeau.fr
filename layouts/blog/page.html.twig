@@ -46,8 +46,10 @@
 
         {% block stylesheets %}
             {{ parent() }}
-            <!-- Prism.js syntax-highlighting theme (blog posts only) -->
-            <link href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-solarizedlight.min.css" rel="stylesheet">
+            <!-- Prism.js syntax-highlighting theme (blog posts only): only styles <pre>/<code> blocks,
+                 never the LCP element, so it's loaded non-blocking via preload+swap (see main.js). -->
+            <link rel="preload" as="style" data-defer-style href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-solarizedlight.min.css">
+            <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-solarizedlight.min.css"></noscript>
         {% endblock stylesheets %}
 
 {% block header %}

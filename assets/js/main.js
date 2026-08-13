@@ -1,3 +1,12 @@
+// Promote non-critical stylesheets from rel="preload" to rel="stylesheet".
+// They were preloaded so the browser fetches them without blocking first
+// paint; this deferred script runs after the critical CSS has already
+// rendered the page, so flipping the rel here applies them asynchronously.
+// (No inline event handler, so this doesn't need a CSP script-src-attr allowance.)
+document.querySelectorAll('link[data-defer-style]').forEach(function (link) {
+    link.rel = 'stylesheet';
+});
+
 var main = {
 
     init : function() {
