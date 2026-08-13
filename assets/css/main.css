@@ -207,6 +207,18 @@ img {
     }
 }
 
+/* Between 768px (where Bootstrap always shows the expanded nav links
+   instead of the collapsed hamburger menu) and ~930px, the brand text,
+   nav links and centered avatar don't all fit: the avatar ends up
+   overlapping and hiding the first nav link ("About me"). There's no
+   collapsed menu to fall back on in this range, so hide the avatar
+   instead, the same way it's hidden while the mobile menu is expanded. */
+@media only screen and (min-width: 768px) and (max-width: 930px) {
+    .navbar-custom .avatar-container {
+        display: none;
+    }
+}
+
 /* Multi-level navigation links */
 .navbar-custom .nav .navlinks-container {
     position: relative;
