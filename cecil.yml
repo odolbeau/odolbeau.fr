@@ -13,6 +13,17 @@ author:
 
 metatags:
   data: true # enables Cecil's built-in JSON-LD structured data output (WebSite/WebPage/BreadcrumbList/...)
+  # Cecil auto-generates a NewsArticle JSON-LD block for any page whose section matches this
+  # value (defaults to 'blog'), duplicating the hand-written BlogPosting block in
+  # layouts/blog/page.html.twig. NewsArticle is wrong for this site regardless: it's a type
+  # Google reserves for journalism/news content, not a personal tech blog, so this isn't a
+  # template bug to report upstream — disabling it here is the correct fix either way.
+  # (It also happens to emit malformed dates — its 'Y-m-dTH:i:sP' format doesn't escape the T,
+  # so PHP renders it as the timezone abbreviation, e.g. "2024-12-02UTC00:00:00+00:00" — still
+  # unfixed as of Cecil 8.118.0, but moot here since the block shouldn't exist on this site.)
+  # Setting this to a value no section will ever match disables it; it must be non-empty,
+  # since Twig's `|default('blog')` falls back on any empty value (false, '', null, 0).
+  articles: '_disabled_'
 
 taxonomies:
   tags: tag
