@@ -48,12 +48,12 @@
             <ul class="pager blog-pager">
                 {% if page.prev is defined %}
                 <li class="previous">
-                    <a href="{{ url(page.prev) }}" data-toggle="tooltip" data-placement="top" title="{{ page.prev.title }}">&larr; Previous Talk</a>
+                    <a href="{{ url(page.prev) }}" title="{{ page.prev.title }}">&larr; Previous Talk</a>
                 </li>
                 {% endif %}
                 {% if page.next is defined %}
                 <li class="next">
-                    <a href="{{ url(page.next) }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next Talk &rarr;</a>
+                    <a href="{{ url(page.next) }}" title="{{ page.next.title }}">Next Talk &rarr;</a>
                 </li>
                 {% endif %}
             </ul>
