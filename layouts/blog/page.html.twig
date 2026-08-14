@@ -2,6 +2,9 @@
 
         {% block head %}
             {{ parent() }}
+            {%- if page.reflang is defined ~%}
+            <link rel="alternate" hreflang="{{ page.lang|default(site.language) }}" href="{{ url(page, {canonical: true}) }}">
+            {%- endif ~%}
             {%- for p in site.allpages -%}
                 {%- if page.reflang is defined and p.reflang is defined and p.reflang == page.reflang and p.lang != page.lang ~%}
             <link rel="alternate" hreflang="{{ p.lang }}" href="{{ url(p, {canonical: true}) }}">
