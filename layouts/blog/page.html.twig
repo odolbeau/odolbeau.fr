@@ -22,9 +22,9 @@
             {
               "@context": "https://schema.org",
               "@type": "BlogPosting",
-              "headline": "{{ page.title|e }}",
+              "headline": "{{ page.title|e('js') }}",
               {%- if page.description|default is not empty ~%}
-              "description": "{{ page.description|replace({"\n": ' '})|trim|e }}",
+              "description": "{{ page.description|replace({"\n": ' '})|trim|e('js') }}",
               {%- endif ~%}
               "datePublished": "{{ page.date|date('c') }}",
               "dateModified": "{{ page.date|date('c') }}",
@@ -34,7 +34,13 @@
                 "@id": "{{ url(site.home, {canonical: true}) }}#person"
               },
               "publisher": {
-                "@id": "{{ url(site.home, {canonical: true}) }}#person"
+                "@type": "Organization",
+                "name": "{{ site.title|e('js') }}",
+                {%- set icon_asset = asset('icon.png', {'ignore_missing': true}) ~%}
+                {%- if not icon_asset.missing ~%}
+                "logo": "{{ url(icon_asset, {canonical: true}) }}",
+                {%- endif ~%}
+                "url": "{{ url(site.home, {canonical: true}) }}"
               }
               {%- if page.tags|default is not empty ~%},
               "keywords": "{{ page.tags|join(', ')|e }}"
