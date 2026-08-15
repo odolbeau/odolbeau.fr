@@ -29,8 +29,13 @@
               {%- if page.description|default is not empty ~%}
               "description": "{{ page.description|replace({"\n": ' '})|trim|e('js') }}",
               {%- endif ~%}
+              {#- page.updated always resolves to *something* (Cecil falls back to the file's
+                  filesystem mtime when no `updated:` front-matter key is set), so it can't be
+                  used to detect "was dateModified actually declared?". page.fmVariables is the
+                  raw, unmerged front-matter dict, so .updated is only present there when the
+                  post explicitly sets it ~#}
               "datePublished": "{{ page.date|date('c') }}",
-              "dateModified": "{{ page.date|date('c') }}",
+              "dateModified": "{{ (page.fmVariables.updated|default(page.date))|date('c') }}",
               "inLanguage": "{{ page.lang|default(site.language) }}",
               "url": "{{ url(page, {canonical: true}) }}",
               "author": {
