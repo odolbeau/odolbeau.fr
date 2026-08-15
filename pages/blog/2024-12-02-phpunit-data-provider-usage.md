@@ -134,10 +134,10 @@ final class EmailValidatorTest extends TestCase
             'data set 1' => ['foo@bar.com', true],
             'data set 2' => ['foo@bar.fr', true],
             'data set 3' => ['foo@bar.br', true],
-            'data set 4' => ['foo@bar.es', true]
-            'data set error 1' => ['@bar', false]
-            'data set error 2' => ['foo@bar', false]
-            'data set error 3' => ['foo@.gr', false]
+            'data set 4' => ['foo@bar.es', true],
+            'data set error 1' => ['@bar', false],
+            'data set error 2' => ['foo@bar', false],
+            'data set error 3' => ['foo@.gr', false],
         ];
     }
 }
@@ -159,9 +159,9 @@ public function testInvalid(string $email)
 public static function invalidEmailProvider()
 {
     return [
-        'data set error 1' => ['@bar']
-        'data set error 2' => ['foo@bar']
-        'data set error 3' => ['foo@.gr']
+        'data set error 1' => ['@bar'],
+        'data set error 2' => ['foo@bar'],
+        'data set error 3' => ['foo@.gr'],
     ];
 }
 ```
