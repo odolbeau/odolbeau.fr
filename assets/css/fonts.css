@@ -6,6 +6,37 @@
   src: url('../fonts/Lora-Bold.woff2') format('woff2');
 }
 
+/* Metric-matched fallback for 'Lora', used by body { font-family: 'Lora', 'Lora Fallback', ... }
+   while the Lora webfont is still loading (font-display: swap paints with this fallback first).
+   ascent-override/descent-override/size-adjust are tuned so this fallback occupies the same
+   line-box height and average glyph width as Lora itself, so swapping the real font in doesn't
+   reflow the page. Without this, the fallback (Times New Roman-ish) renders visibly shorter/
+   narrower than Lora, causing the CLS regression introduced by font-display: swap.
+   Values computed from each Lora weight's own OS/2 metrics against Liberation Serif, which is
+   metrically compatible with Times New Roman (same glyph advance widths) — same method used by
+   tools like Fontaine/Capsize, just run by hand against the actual font files in static/fonts. */
+@font-face {
+  font-family: 'Lora Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Liberation Serif'), local('Times New Roman');
+  ascent-override: 92.79%;
+  descent-override: 25.27%;
+  line-gap-override: 0%;
+  size-adjust: 108.41%;
+}
+
+@font-face {
+  font-family: 'Lora Fallback';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Liberation Serif'), local('Times New Roman');
+  ascent-override: 93.94%;
+  descent-override: 25.59%;
+  line-gap-override: 0%;
+  size-adjust: 107.09%;
+}
+
 @font-face {
   font-family: 'Lora';
   font-style: italic;

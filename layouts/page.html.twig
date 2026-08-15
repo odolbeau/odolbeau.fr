@@ -41,6 +41,13 @@
                 <!-- Bootstrap core CSS: render-blocking, needed for the above-the-fold layout (grid, nav) -->
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+                <!-- Preload the two Lora weights used above the fold (body text + <strong>/<b>), so the
+                     browser fetches them immediately instead of discovering them only once it parses
+                     the @font-face rules in fonts.css below. Paired with the metric-matched fallback in
+                     fonts.css to fix the CLS regression that font-display: swap introduced. -->
+                <link rel="preload" href="/fonts/Lora-Regular.woff2" as="font" type="font/woff2" crossorigin>
+                <link rel="preload" href="/fonts/Lora-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
                 <!-- Site CSS, bundled into a single request: also render-blocking, needed for above-the-fold layout/type -->
                 <link rel="stylesheet" href="{{ asset(['css/main.css', 'css/fonts.css']) }}">
 
