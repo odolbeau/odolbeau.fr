@@ -1,7 +1,9 @@
 /* --- General --- */
 
 body {
-    font-family: 'Lora', 'Times New Roman', serif;
+    /* 'Lora Fallback' is a metric-matched stand-in (see fonts.css) that occupies the same
+       line-box height/width as Lora, so the font-display: swap below doesn't reflow the page. */
+    font-family: 'Lora', 'Lora Fallback', 'Times New Roman', serif;
     font-size: 22px;
     color: #404040;
     position: relative;
