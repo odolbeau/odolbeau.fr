@@ -60,3 +60,5 @@ Moins de code, moins de bugs, moins de maintenance, plus de lisibilité. Bref, q
 Si vous voulez plus d'informations sur les data providers, n'hésitez pas à consulter l'excellente documentation de PHUnit <a href="http://www.phpunit.de/manual/3.5/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers" title="Documentation de PHPUnit: les data providers">ici</a>!
 
 (Et encore une fois, merci <a href="http://twitter.com/#!/futurecat" title="@futurecat">@futurecat</a>! :))
+
+**Mise à jour :** plus de dix ans (!) et beaucoup de projets plus tard, j'ai écrit [un article plus récent sur le sujet](/blog/phpunit-data-provider-usage/), qui parle cette fois des cas où il vaut mieux **éviter** d'utiliser un data provider.

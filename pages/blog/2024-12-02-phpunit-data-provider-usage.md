@@ -7,7 +7,7 @@ description: Quand l'utilisation d'un data provider PHPUnit est-elle pertinente 
 tags: [phpunit, dataprovider, data provider]
 ---
 
-Lors de mes dernières missions, il m'est arrivé plusieurs fois de tomber sur **un usage des Data Provider qui ne me paraissait pas forcément pertinent**. Voici donc un petit article pour parler de tout ça.
+Lors de mes dernières missions, il m'est arrivé plusieurs fois de tomber sur **un usage des Data Provider qui ne me paraissait pas forcément pertinent**. Voici donc un petit article pour parler de tout ça (en complément de [mon article sur le sujet](/blog/la-puissance-des-data-providers-de-phpunit/), qui date un peu !).
 
 ## Qu'est-ce qu'un Data Provider ?
 
@@ -220,3 +220,5 @@ public static function additionProvider(): iterable
 ```
 
 Bon, c'est sur qu'avec un exemple aussi simple, les avantages ne sont pas forcément tous évidents mais j'espère que vous aurez l'occasion de vous rendre compte de leur efficacité dans vos propres tests ! 😉
+
+Et une fois vos tests écrits, encore faut-il s'assurer qu'ils couvrent bien tout ce qui doit l'être : j'en parle dans [l'article sur mon bundle TestedRoutesCheckerBundle](/blog/announcing-tested-routes-checker-bundle-fr/), qui détecte les routes jamais couvertes par un test.
