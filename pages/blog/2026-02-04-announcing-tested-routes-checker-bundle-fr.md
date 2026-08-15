@@ -1,6 +1,7 @@
 ---
 title: 🚀 Découvrez TestedRoutesCheckerBundle !
 date: 2026-02-04
+updated: 2026-08-15
 published: true
 lang: fr
 reflang: announcing-tested-routes-checker-bundle
